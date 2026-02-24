@@ -59,6 +59,7 @@ npm run dev
 ###To Start Backend
 .[python.exe](http://_vscodecontentref_/0) -m uvicorn ecoverify.main:app --host 0.0.0.0 --port 8001 --app-dir backend/src
 
+```bash
 🧪 Verifiable Logic (Mermaid.js)
 
 graph TD
@@ -77,6 +78,7 @@ Explainability: Decision traces are rendered as human-verifiable graphs via the 
 Green AI: Core inference utilizes Small Language Models (SLMs) for edge-reasoning to reduce the system's own carbon footprint by 40%.
 ```bash
 © 2026 EcoVerify-Prime Team. Licensed under MIT.
+
 
 
 
