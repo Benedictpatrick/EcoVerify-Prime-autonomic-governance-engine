@@ -5,31 +5,36 @@ EcoVerify-Prime is a production-grade autonomous multi-agent platform for enterp
 
 The platform combines deterministic agent orchestration, cryptographically verifiable decision traces, and generative user interfaces to deliver auditable, explainable, and actionable sustainability intelligence.
 
-┌─────────────────────────────────────────────────────────────┐
-│  React 19 Dashboard (Tailwind 4 + Three.js + Framer Motion) │
-│  ┌──────────┐ ┌──────────────┐ ┌────────────────────────┐   │
-│  │ 3D Twin  │ │ Neural Feed  │ │ Governor HITL Panel    │   │
-│  └──────────┘ └──────────────┘ └────────────────────────┘   │
-│  └─────────── Proof-Graph (Mermaid.js) ──────────────────┘   │
-└──────────────────────────┬──────────────────────────────────┘
-                           │ SSE (Server-Sent Events)
-┌──────────────────────────▼──────────────────────────────────┐
-│  FastAPI Gateway (SSE Streaming + REST)                      │
-├──────────────────────────────────────────────────────────────┤
-│  LangGraph Cyclic State Machine                              │
-│  ┌──────────┐   ┌─────────┐   ┌───────────┐   ┌──────────┐   │
-│  │ VANGUARD │──▶│ JURIST  │──▶│ ARCHITECT │──▶│ GOVERNOR │   │
-│  │ (Monitor)│◀──│(Comply) │   │(Simulate) │◀──│  (HITL)  │   │
-│  └──────────┘   └─────────┘   └───────────┘   └──────────┘   │
-│       │              │              │               │         │
-│       └──────────────┴──────────────┴───────────────┘         │
-│                    NHI Signing (Ed25519)                      │
-├──────────────────────────────────────────────────────────────┤
-│  FastMCP 3.x Tool Server                                     │
-│  ┌─────┐  ┌──────────┐  ┌────────────────────┐               │
-│  │ BMS │  │ Jira Ops │  │ Regulatory Registry│               │
-│  └─────┘  └──────────┘  └────────────────────┘               │
-└──────────────────────────────────────────────────────────────┘
++-----------------------------------------------------------+
+| React Dashboard (Tailwind + Three.js + Framer Motion)     |
+|                                                           |
+|  +--------+   +------------+   +----------------------+   |
+|  | 3D Twin|   | NeuralFeed |   | Governor HITL Panel  |   |
+|  +--------+   +------------+   +----------------------+   |
+|                                                           |
+|        Proof Graph (Mermaid)                              |
++--------------------------+--------------------------------+
+                           |
+                           |  SSE
+                           v
++-----------------------------------------------------------+
+| FastAPI Gateway (REST + Streaming)                        |
++-----------------------------------------------------------+
+| LangGraph Cyclic State Machine                            |
+|                                                           |
+|  VANGUARD --> JURIST --> ARCHITECT --> GOVERNOR           |
+|     ^                                  |                  |
+|     +----------------------------------+                  |
+|                                                           |
+|            Ed25519 Decision Signing                       |
++-----------------------------------------------------------+
+| MCP Tool Server                                           |
+|   BMS     |    Jira Ops    |    Regulatory Registry       |
++-----------------------------------------------------------+
+
+
+
+
 
 | Agent         | Responsibility                                                        | Execution Node    |
 | ------------- | --------------------------------------------------------------------- | ----------------- |
@@ -118,5 +123,6 @@ License
 License
 
 Breakform
+
 
 
