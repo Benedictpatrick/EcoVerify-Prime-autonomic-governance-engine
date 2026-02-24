@@ -8,6 +8,11 @@ EcoVerify-Prime is a production-grade autonomic ecosystem engineered for the Out
 
 Built using Durable Orchestration (LangGraph) and the Model Context Protocol (MCP), the system manages the complete OODA Loop (Observe-Orient-Decide-Act) autonomously, delivering measurable ROI through deterministic optimization.
 
+<img width="608" height="483" alt="Screenshot 2026-02-24 211145" src="https://github.com/user-attachments/assets/838ccd15-447e-49d2-93e8-b6a595d68e6e" />
+
+
+<img width="1919" height="1079" alt="Screenshot 2026-02-24 223012" src="https://github.com/user-attachments/assets/b04ade39-a359-4c90-aeff-dcbde9c1f394" />
+
 🏗️ Architecture: The Autonomic Engine
 Unlike brittle prompt-chains, EcoVerify-Prime is architected as a Verifiable Digital Twin Governor.
 
@@ -69,5 +74,6 @@ Explainability: Decision traces are rendered as human-verifiable graphs via the 
 Green AI: Core inference utilizes Small Language Models (SLMs) for edge-reasoning to reduce the system's own carbon footprint by 40%.
 
 © 2026 EcoVerify-Prime Team. Licensed under MIT.
+
 
 
