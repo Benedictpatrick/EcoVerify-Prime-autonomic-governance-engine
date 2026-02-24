@@ -1,0 +1,540 @@
+@import "tailwindcss";
+
+/* ── EcoVerify-Prime Design System (Finance Report Aesthetic) ──── */
+
+@theme {
+  --color-eco-green: #00ff88;
+  --color-eco-blue: #3b82f6;
+  --color-eco-purple: #a855f7;
+  --color-eco-amber: #f59e0b;
+  --color-eco-red: #ff3366;
+  --color-eco-cyan: #06b6d4;
+  --color-eco-teal: #14b8a6;
+
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-600: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-300: #d4d4d8;
+
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+  --color-glass-hover: rgba(255, 255, 255, 0.06);
+
+  --color-card: rgba(24, 24, 27, 0.80);
+  --color-card-border: rgba(63, 63, 70, 0.45);
+
+  --font-sans: "Geist Sans", "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+}
+
+/* Fallback for browsers / bundlers that don't process @theme */
+:root {
+  --color-eco-green: #00ff88;
+  --color-eco-blue: #3b82f6;
+  --color-eco-purple: #a855f7;
+  --color-eco-amber: #f59e0b;
+  --color-eco-red: #ff3366;
+  --color-eco-cyan: #06b6d4;
+  --color-eco-teal: #14b8a6;
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-600: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-300: #d4d4d8;
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+  --color-glass-hover: rgba(255, 255, 255, 0.06);
+  --color-card: rgba(24, 24, 27, 0.80);
+  --color-card-border: rgba(63, 63, 70, 0.45);
+  --font-sans: "Geist Sans", "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+}
+
+/* ── Base ───────────────────────────────────────────────────────── */
+
+body {
+  background: var(--color-zinc-950);
+  color: var(--color-zinc-300);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ambient gradient background */
+.ambient-bg {
+  position: relative;
+  overflow: hidden;
+}
+.ambient-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 20%, rgba(0, 255, 136, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60% at 50% 50%, rgba(168, 85, 247, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Glassmorphism ──────────────────────────────────────────────── */
+
+.glass {
+  background: var(--color-glass);
+  backdrop-filter: blur(24px) saturate(1.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 12px;
+}
+
+.glass-hover:hover {
+  background: var(--color-glass-hover);
+}
+
+.glass-strong {
+  background: rgba(10, 10, 15, 0.75);
+  backdrop-filter: blur(40px) saturate(1.4);
+  -webkit-backdrop-filter: blur(40px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+}
+
+/* ── Scrollbar (minimal) ────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ── Glow effects ───────────────────────────────────────────────── */
+
+.glow-green {
+  box-shadow:
+    0 0 20px rgba(0, 255, 136, 0.12),
+    0 0 60px rgba(0, 255, 136, 0.04),
+    inset 0 1px 0 rgba(0, 255, 136, 0.1);
+}
+
+.glow-red {
+  box-shadow:
+    0 0 20px rgba(255, 51, 102, 0.15),
+    0 0 60px rgba(255, 51, 102, 0.06),
+    inset 0 1px 0 rgba(255, 51, 102, 0.1);
+}
+
+.glow-amber {
+  box-shadow:
+    0 0 20px rgba(245, 158, 11, 0.15),
+    0 0 60px rgba(245, 158, 11, 0.06),
+    inset 0 1px 0 rgba(245, 158, 11, 0.1);
+}
+
+.glow-blue {
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.12),
+    0 0 60px rgba(59, 130, 246, 0.04),
+    inset 0 1px 0 rgba(59, 130, 246, 0.1);
+}
+
+/* ── Pulse animation ────────────────────────────────────────────── */
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.06) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* ── Agent badges ───────────────────────────────────────────────── */
+
+.badge-vanguard {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 4px;
+}
+
+.badge-jurist {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 4px;
+}
+
+.badge-architect {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 4px;
+}
+
+.badge-governor {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 4px;
+}
+
+.badge-system {
+  background: rgba(6, 182, 212, 0.15);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  border-radius: 4px;
+}
+
+/* ── Gradient text ──────────────────────────────────────────────── */
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #00ff88, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Noise overlay ──────────────────────────────────────────────── */
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Card (Finance Report style) ────────────────────────────────── */
+
+.card {
+  background: var(--color-card);
+  backdrop-filter: blur(32px) saturate(1.3);
+  -webkit-backdrop-filter: blur(32px) saturate(1.3);
+  border: 1px solid var(--color-card-border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.card-sm {
+  background: var(--color-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--color-card-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* ── Metric heading ─────────────────────────────────────────────── */
+
+.metric-value {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-zinc-500);
+}
+
+.metric-delta-up {
+  color: #22c55e;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.metric-delta-down {
+  color: #ef4444;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+/* ── Sparkline / Mini chart ─────────────────────────────────────── */
+
+@keyframes sparkline-draw {
+  from { stroke-dashoffset: 300; }
+  to   { stroke-dashoffset: 0; }
+}
+
+.sparkline path {
+  stroke-dasharray: 300;
+  animation: sparkline-draw 1s ease-out forwards;
+}
+
+/* ── Side Navigation ────────────────────────────────────────────── */
+
+.nav-sidebar {
+  width: 72px;
+  background: rgba(9, 9, 11, 0.96);
+  border-right: 1px solid var(--color-card-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  gap: 4px;
+}
+
+.nav-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: var(--color-zinc-500);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-icon:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-zinc-300);
+}
+
+.nav-icon.active {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+/* ── Top bar ────────────────────────────────────────────────────── */
+
+.top-bar {
+  height: 56px;
+  background: rgba(9, 9, 11, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-card-border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* ── Volume bar chart ───────────────────────────────────────────── */
+
+.volume-bar {
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.volume-bar-green {
+  background: linear-gradient(180deg, #22c55e 0%, rgba(34, 197, 94, 0.6) 100%);
+}
+
+.volume-bar-red {
+  background: linear-gradient(180deg, #ef4444 0%, rgba(239, 68, 68, 0.6) 100%);
+}
+
+/* ── Domain badges (new) ────────────────────────────────────────── */
+
+.badge-fintech {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 4px;
+}
+
+.badge-health {
+  background: rgba(236, 72, 153, 0.12);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 4px;
+}
+
+.badge-edutech {
+  background: rgba(6, 182, 212, 0.12);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 4px;
+}
+
+.badge-web3 {
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 4px;
+}
+
+.badge-media {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: 4px;
+}
+
+/* ── Transaction table ──────────────────────────────────────────── */
+
+.tx-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.tx-table th {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-zinc-500);
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.tx-table td {
+  font-size: 0.8125rem;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(63, 63, 70, 0.2);
+  color: var(--color-zinc-300);
+}
+
+.tx-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ── Right panel / Governor sidebar ─────────────────────────────── */
+
+.panel-right {
+  width: 340px;
+  background: rgba(9, 9, 11, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-left: 1px solid var(--color-card-border);
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* ── Status dot ─────────────────────────────────────────────────── */
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot-live {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.status-dot-idle {
+  background: var(--color-zinc-600);
+}
+
+.status-dot-warn {
+  background: #f59e0b;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.5);
+}
+
+/* ── Dashboard grid layout ──────────────────────────────────────── */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 72px 1fr 340px;
+  grid-template-rows: 56px 1fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.dashboard-nav  { grid-column: 1; grid-row: 1 / -1; }
+.dashboard-top  { grid-column: 2 / -1; grid-row: 1; }
+.dashboard-main { grid-column: 2; grid-row: 2; overflow-y: auto; padding: 20px; }
+.dashboard-side { grid-column: 3; grid-row: 2; }
+
+/* ── Sub-grid for main area ─────────────────────────────────────── */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  gap: 16px;
+}
+
+.main-grid .span-full  { grid-column: 1 / -1; }
+.main-grid .span-2     { grid-column: span 2; }
+
+/* ── Fade-in animation ──────────────────────────────────────────── */
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in-up 0.35s ease-out both;
+}
+
+/* ── Tab system ─────────────────────────────────────────────────── */
+
+.tab-btn {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-zinc-500);
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+  background: none;
+}
+
+.tab-btn:hover {
+  color: var(--color-zinc-300);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tab-btn.active {
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.08);
+}

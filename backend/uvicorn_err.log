@@ -1,0 +1,31 @@
+[32mINFO[0m:     Will watch for changes in these directories: ['E:\\constellationX\\backend']
+[32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     Started reloader process [[36m[1m21512[0m] using [36m[1mWatchFiles[0m
+[32mINFO[0m:     Started server process [[36m26492[0m]
+[32mINFO[0m:     Waiting for application startup.
+2026-02-24 21:53:51,394 [ecoverify.main] INFO EcoVerify-Prime starting up…
+2026-02-24 21:53:51,394 [ecoverify.telemetry.tracing] INFO OpenTelemetry initialised for service 'ecoverify-prime'.
+2026-02-24 21:53:51,394 [ecoverify.nhi.keys] INFO Key already exists for agent 'vanguard', loading.
+2026-02-24 21:53:51,403 [ecoverify.nhi.keys] INFO Key already exists for agent 'jurist', loading.
+2026-02-24 21:53:51,403 [ecoverify.nhi.keys] INFO Key already exists for agent 'architect', loading.
+2026-02-24 21:53:51,403 [ecoverify.nhi.keys] INFO Key already exists for agent 'governor', loading.
+2026-02-24 21:53:51,403 [ecoverify.nhi.keys] INFO All agent NHI keys verified/generated.
+2026-02-24 21:53:51,403 [ecoverify.main] INFO Ready — API on port 8000
+[32mINFO[0m:     Application startup complete.
+[33mWARNING[0m:  WatchFiles detected changes in 'src\ecoverify\api\routes.py'. Reloading...
+[32mINFO[0m:     Shutting down
+[32mINFO[0m:     Waiting for application shutdown.
+2026-02-24 21:53:53,247 [ecoverify.main] INFO EcoVerify-Prime shutting down.
+[32mINFO[0m:     Application shutdown complete.
+[32mINFO[0m:     Finished server process [[36m26492[0m]
+[32mINFO[0m:     Started server process [[36m10408[0m]
+[32mINFO[0m:     Waiting for application startup.
+2026-02-24 21:53:54,631 [ecoverify.main] INFO EcoVerify-Prime starting up…
+2026-02-24 21:53:54,631 [ecoverify.telemetry.tracing] INFO OpenTelemetry initialised for service 'ecoverify-prime'.
+2026-02-24 21:53:54,631 [ecoverify.nhi.keys] INFO Key already exists for agent 'vanguard', loading.
+2026-02-24 21:53:54,637 [ecoverify.nhi.keys] INFO Key already exists for agent 'jurist', loading.
+2026-02-24 21:53:54,637 [ecoverify.nhi.keys] INFO Key already exists for agent 'architect', loading.
+2026-02-24 21:53:54,637 [ecoverify.nhi.keys] INFO Key already exists for agent 'governor', loading.
+2026-02-24 21:53:54,637 [ecoverify.nhi.keys] INFO All agent NHI keys verified/generated.
+2026-02-24 21:53:54,637 [ecoverify.main] INFO Ready — API on port 8000
+[32mINFO[0m:     Application startup complete.
