@@ -52,11 +52,12 @@ export OPENAI_API_KEY=your_key
 python -m ecoverify.main
 
 ### Frontend Setup
-```bash
 cd frontend
 npm install
 npm run dev
 
+###To Start Backend
+.[python.exe](http://_vscodecontentref_/0) -m uvicorn ecoverify.main:app --host 0.0.0.0 --port 8001 --app-dir backend/src
 
 🧪 Verifiable Logic (Mermaid.js)
 
@@ -74,8 +75,9 @@ Zero-Trust Boundaries: Agents operate under "Least Privilege" and are physically
 Explainability: Decision traces are rendered as human-verifiable graphs via the dashboard's "XAI" drawer.
 
 Green AI: Core inference utilizes Small Language Models (SLMs) for edge-reasoning to reduce the system's own carbon footprint by 40%.
-
+```bash
 © 2026 EcoVerify-Prime Team. Licensed under MIT.
+
 
 
 
