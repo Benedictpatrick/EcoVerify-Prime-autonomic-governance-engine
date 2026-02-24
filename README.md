@@ -1,8 +1,8 @@
 EcoVerify-Prime: The Autonomic Global Governor
 
-(https://img.shields.io/badge/Architecture-Durable--State--Machine-green)](#architecture)
+[![Architecture Durable State Machine](https://img.shields.io/badge/Architecture-Durable--State--Machine-green)](#architecture)
 
-(https://img.shields.io/badge/Identity-Zero--Trust--NHI-darkred)](#trust-and-privacy)
+[![Identity Zero Trust](https://img.shields.io/badge/Identity-Zero--Trust--NHI-darkred)](#trust-and-privacy)
 
 EcoVerify-Prime is a production-grade autonomic ecosystem engineered for the Outcome Economy. It moves beyond reactive "chat" interfaces to provide a governed, multi-agent workforce capable of monitoring, auditing, and optimizing regulated infrastructure across nine disparate domains—from Sustainability and Fintech to Health and Web3—simultaneously.
 
@@ -69,4 +69,5 @@ Explainability: Decision traces are rendered as human-verifiable graphs via the 
 Green AI: Core inference utilizes Small Language Models (SLMs) for edge-reasoning to reduce the system's own carbon footprint by 40%.
 
 © 2026 EcoVerify-Prime Team. Licensed under MIT.
+
 
