@@ -11,7 +11,9 @@ Built using Durable Orchestration (LangGraph) and the Model Context Protocol (MC
 <img width="1919" height="1079" alt="Screenshot 2026-02-24 223012" src="https://github.com/user-attachments/assets/b04ade39-a359-4c90-aeff-dcbde9c1f394" />
 
 
-<img width="1919" height="1079" alt="Screenshot 2026-02-24 223030" src="https://github.com/user-attachments/assets/703cd1f7-8076-47b1-bdad-3f5d9f9d6a36" />
+
+<img width="1823" height="1073" alt="Screenshot 2026-02-24 235414" src="https://github.com/user-attachments/assets/bb665f14-a77d-4997-b35c-98bceb48059a" />
+
 
 🏗️ Architecture: The Autonomic Engine
 Unlike brittle prompt-chains, EcoVerify-Prime is architected as a Verifiable Digital Twin Governor.
@@ -74,6 +76,7 @@ Explainability: Decision traces are rendered as human-verifiable graphs via the 
 Green AI: Core inference utilizes Small Language Models (SLMs) for edge-reasoning to reduce the system's own carbon footprint by 40%.
 
 © 2026 EcoVerify-Prime Team. Licensed under MIT.
+
 
 
 
